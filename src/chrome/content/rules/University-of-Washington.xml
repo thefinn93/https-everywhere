@@ -4,7 +4,6 @@
 
 	Nonfunctional:
 
-		- (www.)uwb.edu			(reset)
 		- psc.apl.washington.edu
 		- oneswarm.cs.washington.edu
 		- uwmedicine.washington.edu	(reset)
@@ -23,6 +22,8 @@
 <ruleset name="University of Washington (partial)">
 
 	<target host="uw.edu" />
+	<target host="uwb.edu" />
+	<target host="www.uwb.edu" />
 	<!--	* for cross-subdomain cookie.	-->
 	<target host="*.tacoma.uw.edu" />
 	<target host="*.uw.edu" />
@@ -57,5 +58,11 @@
 	<!--	^lib: Cert is only valid for *.lib	-->
 	<rule from="^https?://lib\.washington\.edu/"
 		to="https://www.lib.washington.edu/" />
+                
+        <rule from="^http?://uwb\.edu/"
+                to="https://www.uwb.edu/" />
+
+        <rule from="^http?://www.uwb\.edu/"
+                to="https://www.uwb.edu/" />
 
 </ruleset>

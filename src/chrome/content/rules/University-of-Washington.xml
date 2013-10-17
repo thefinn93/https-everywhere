@@ -68,5 +68,7 @@
         
         <rule from="^http://library\.uwb\.edu/"
 				to="https://library.uwb.edu/" />
-
+		
+		<rule from="^http://www\.bothell\.washington\.edu/"
+				to="https://www.uwb.edu/" />
 </ruleset>

@@ -1,64 +1,64 @@
 <!--
-	For problematic rules, see University-of-Washington-self-signed.xml.
+    For problematic rules, see University-of-Washington-self-signed.xml.
 
 
-	Nonfunctional:
+    Nonfunctional:
 
-		- psc.apl.washington.edu
-		- oneswarm.cs.washington.edu
-		- uwmedicine.washington.edu	(reset)
-
-
-	Partially covered subdomains:
-
-		- digital.lib	(findingaids/view 404s)
+        - psc.apl.washington.edu
+        - oneswarm.cs.washington.edu
+        - uwmedicine.washington.edu    (reset)
 
 
-	Fully covered subdomains:
+    Partially covered subdomains:
 
-		- sharemenot.cs
+        - digital.lib    (findingaids/view 404s)
+
+
+    Fully covered subdomains:
+
+        - sharemenot.cs
 
 -->
 <ruleset name="University of Washington (partial)">
 
-	<target host="uw.edu" />
-	<target host="uwb.edu" />
-	<target host="www.uwb.edu" />
-	<target host="library.uwb.edu" />
-	<!--	* for cross-subdomain cookie.	-->
-	<target host="*.tacoma.uw.edu" />
-	<target host="*.uw.edu" />
-	<target host="washington.edu" />
-	<target host="cloud.ihme.washington.edu" />
-	<target host="www.lib.washington.edu" />
-	<target host="*.washington.edu" />
-		<!--
-			News pages redirect to http:
-						-->
-		<exclusion pattern="^http://(?:www\.)?washington\.edu/news/(?:\d{4}/(?:\d\d/(?:\d\d/(?:[\w-]+/)?)?)?)?(?:\?.*)?$" />
-		<!--
-			404:
-				-->
-		<exclusion pattern="^http://digital\.lib\.washington\.edu/findingaids/" />
+    <target host="uw.edu" />
+    <target host="uwb.edu" />
+    <target host="www.uwb.edu" />
+    <target host="library.uwb.edu" />
+    <!--    * for cross-subdomain cookie.    -->
+    <target host="*.tacoma.uw.edu" />
+    <target host="*.uw.edu" />
+    <target host="washington.edu" />
+    <target host="cloud.ihme.washington.edu" />
+    <target host="www.lib.washington.edu" />
+    <target host="*.washington.edu" />
+        <!--
+            News pages redirect to http:
+                        -->
+        <exclusion pattern="^http://(?:www\.)?washington\.edu/news/(?:\d{4}/(?:\d\d/(?:\d\d/(?:[\w-]+/)?)?)?)?(?:\?.*)?$" />
+        <!--
+            404:
+                -->
+        <exclusion pattern="^http://digital\.lib\.washington\.edu/findingaids/" />
 
 
-	<securecookie host="^cloud\.ihme\.washington\.edu$" name=".*" />
-	<securecookie host="^\.tacoma\.uw\.edu$" name=".*" />
+    <securecookie host="^cloud\.ihme\.washington\.edu$" name=".*" />
+    <securecookie host="^\.tacoma\.uw\.edu$" name=".*" />
 
 
-	<rule from="^http://(blogs\.|www\.(?:tacoma\.)?)?uw\.edu/"
-		to="https://$1uw.edu/" />
+    <rule from="^http://(blogs\.|www\.(?:tacoma\.)?)?uw\.edu/"
+        to="https://$1uw.edu/" />
 
-	<!--	^tacoma: Cert only valid for www.tacoma.uw.edu.	-->
-	<rule from="^https?://tacoma\.uw\.edu/"
-		to="https://www.tacoma.uw.edu/" />
+    <!--    ^tacoma: Cert only valid for www.tacoma.uw.edu.    -->
+    <rule from="^https?://tacoma\.uw\.edu/"
+        to="https://www.tacoma.uw.edu/" />
 
-	<rule from="^http://((?:courses|students|sharemenot\.cs|depts|faculty|cloud\.ihme|digital\.lib|myuw|staff|www(?:\.lib)?)\.)?washington\.edu/"
-		to="https://$1washington.edu/" />
+    <rule from="^http://((?:courses|students|sharemenot\.cs|depts|faculty|cloud\.ihme|digital\.lib|myuw|staff|www(?:\.lib)?)\.)?washington\.edu/"
+        to="https://$1washington.edu/" />
 
-	<!--	^lib: Cert is only valid for *.lib	-->
-	<rule from="^https?://lib\.washington\.edu/"
-		to="https://www.lib.washington.edu/" />
+    <!--    ^lib: Cert is only valid for *.lib    -->
+    <rule from="^https?://lib\.washington\.edu/"
+        to="https://www.lib.washington.edu/" />
                 
         <rule from="^http://uwb\.edu/"
                 to="https://www.uwb.edu/" />
@@ -67,8 +67,8 @@
                 to="https://www.uwb.edu/" />
         
         <rule from="^http://library\.uwb\.edu/"
-				to="https://library.uwb.edu/" />
-		
-		<rule from="^http://www\.bothell\.washington\.edu/"
-				to="https://www.uwb.edu/" />
+                to="https://library.uwb.edu/" />
+        
+        <rule from="^http://www\.bothell\.washington\.edu/"
+                to="https://www.uwb.edu/" />
 </ruleset>

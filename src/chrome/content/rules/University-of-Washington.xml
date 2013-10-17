@@ -60,15 +60,15 @@
     <rule from="^https?://lib\.washington\.edu/"
         to="https://www.lib.washington.edu/" />
                 
-        <rule from="^http://uwb\.edu/"
-                to="https://www.uwb.edu/" />
+    <rule from="^http://uwb\.edu/"
+        to="https://www.uwb.edu/" />
 
-        <rule from="^http://www\.uwb\.edu/"
-                to="https://www.uwb.edu/" />
+    <rule from="^http://www\.uwb\.edu/"
+        to="https://www.uwb.edu/" />
+       
+   <rule from="^http://library\.uwb\.edu/"
+        to="https://library.uwb.edu/" />
         
-        <rule from="^http://library\.uwb\.edu/"
-                to="https://library.uwb.edu/" />
-        
-        <rule from="^http://www\.bothell\.washington\.edu/"
-                to="https://www.uwb.edu/" />
+   <rule from="^http://www\.bothell\.washington\.edu/"
+        to="https://www.uwb.edu/" />
 </ruleset>

@@ -24,6 +24,7 @@
 	<target host="uw.edu" />
 	<target host="uwb.edu" />
 	<target host="www.uwb.edu" />
+	<target host="library.uwb.edu" />
 	<!--	* for cross-subdomain cookie.	-->
 	<target host="*.tacoma.uw.edu" />
 	<target host="*.uw.edu" />
@@ -59,10 +60,13 @@
 	<rule from="^https?://lib\.washington\.edu/"
 		to="https://www.lib.washington.edu/" />
                 
-        <rule from="^http?://uwb\.edu/"
+        <rule from="^http://uwb\.edu/"
                 to="https://www.uwb.edu/" />
 
-        <rule from="^http?://www.uwb\.edu/"
+        <rule from="^http://www\.uwb\.edu/"
                 to="https://www.uwb.edu/" />
+        
+        <rule from="^http://library\.uwb\.edu/"
+				to="https://library.uwb.edu/" />
 
 </ruleset>
